@@ -1,28 +1,28 @@
 package com.itsedeug.swr.testesdeintegracao;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import com.itsedeug.swr.model.Base;
 import com.itsedeug.swr.model.Rebelde;
-import com.itsedeug.swr.model.RepositorioBases;
 import com.itsedeug.swr.model.RepositorioRebeldes;
 
+@RunWith(SpringRunner.class)
+@DataJpaTest
 public class TesteDoRepositorioDeRebeldes {
 	
 	//gerenciador de entidades forneciso pelo spring boot permite simular persistencia
     @Autowired
     private TestEntityManager gerenciadorDeEntidades;
-    @Autowired
-    private RepositorioBases repositorioDeBases;
     @Autowired
     private RepositorioRebeldes repositorioDeRebeldes;
 
@@ -35,10 +35,10 @@ public class TesteDoRepositorioDeRebeldes {
         gerenciadorDeEntidades.flush();
      
         // chamada de metodo de consulta em repositorio de bases
-        Rebelde found = repositorioDeRebeldes.findByName(luke.getName());
+        Rebelde found = repositorioDeRebeldes.findByNome(luke.getNome());
      
         // verificar
-        assertThat(found.getName()).isEqualTo(luke.getName());
+        assertThat(found.getNome()).isEqualTo(luke.getNome());
     }
     
     @Test
@@ -52,7 +52,7 @@ public class TesteDoRepositorioDeRebeldes {
         gerenciadorDeEntidades.flush();
      
         // chamada de metodo de consulta em repositorio de bases
-        List<Rebelde> rebeldes = repositorioDeRebeldes.findByBaseName(planetaX.getName());
+        List<Rebelde> rebeldes = repositorioDeRebeldes.findByLocalizacao(planetaX);
      
         // verificar
         assertTrue(rebeldes.size() == 2);

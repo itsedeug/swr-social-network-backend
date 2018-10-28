@@ -1,22 +1,52 @@
 package com.itsedeug.swr.model;
 
-public class Rebelde {
-	
-	private Base base;
+import java.io.Serializable;
 
-	public Rebelde(String string, String string2, String string3, Base base) {
-		// TODO Auto-generated constructor stub
-		this.base = base;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+/**
+ * Entidade Rebelde. Com atributos de acordo com especificacao. 
+ * @author italo
+ *
+ */
+@Entity
+public class Rebelde implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	//campos
+	private String nome;
+	private String idade;
+	private String genero;
+	private Base localizacao;
+
+	public Rebelde(String nome, String idade, String genero, Base localizacao) {
+		this.setNome(nome);
+		this.setIdade(idade);
+		this.setGenero(genero);
+		this.setLocalizacao(localizacao);
 	}
 
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public Base getBase() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	//metodos de acesso
+	public String getNome() { return nome; }
+	public void setNome(String nome) { this.nome = nome; }
+
+	public String getIdade() { return idade; }
+	public void setIdade(String idade) { this.idade = idade; }
+
+	public String getGenero() { return genero; }
+	public void setGenero(String genero) { this.genero = genero; }
+
+	public Base getLocalizacao() { return localizacao; }
+	public void setLocalizacao(Base localizacao) { this.localizacao = localizacao; }
 
 }
