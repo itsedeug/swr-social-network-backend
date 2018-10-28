@@ -55,6 +55,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+        	<groupId>com.openpojo</groupId>
+        	<artifactId>openpojo</artifactId>
+        	<version>0.8.10</version>
+    	</dependency>
 	</dependencies>
 
 	<build>
@@ -63,8 +68,30 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>cobertura-maven-plugin</artifactId>
+		        <version>2.7</version>
+		    </plugin>
 		</plugins>
 	</build>
+	
+	<reporting>
+	    <plugins>
+	        <plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>cobertura-maven-plugin</artifactId>
+		        <version>2.7</version>
+	            <configuration>
+	                <check></check>
+	                <formats>
+	                    <format>html</format>
+	                    <format>xml</format>
+	                </formats>
+	            </configuration>
+	        </plugin>
+	    </plugins>
+	</reporting>
 
 
 </project>

@@ -43,5 +43,4 @@ public class Base implements Serializable {
 
 	public String getLongitude() { return longitude; }
 	public void setLongitude(String longitude) { this.longitude = longitude; }
-
 }

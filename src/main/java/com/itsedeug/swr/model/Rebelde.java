@@ -28,12 +28,14 @@ public class Rebelde implements Serializable {
 	private String idade;
 	private String genero;
 	private Base localizacao;
+	private Inventario inventario;
 
-	public Rebelde(String nome, String idade, String genero, Base localizacao) {
+	public Rebelde(String nome, String idade, String genero, Base localizacao, Inventario inv) {
 		this.setNome(nome);
 		this.setIdade(idade);
 		this.setGenero(genero);
 		this.setLocalizacao(localizacao);
+		this.setInventario(inv);
 	}
 
 	//metodos de acesso
@@ -49,4 +51,6 @@ public class Rebelde implements Serializable {
 	public Base getLocalizacao() { return localizacao; }
 	public void setLocalizacao(Base localizacao) { this.localizacao = localizacao; }
 
+	public Inventario getInventario() { return inventario; }
+	public void setInventario(Inventario inventario) { this.inventario = inventario; }
 }

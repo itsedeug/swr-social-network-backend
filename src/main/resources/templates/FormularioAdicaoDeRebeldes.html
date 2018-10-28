@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width" />
+		<title>Registro de novo rebelde</title>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+			rel="stylesheet"/>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+			rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>Adicionar novo rebelde</h1>
+		<form class="form-inline" method="POST" style="margin: 20px 0">
+			<div class="form-group">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Informacao</th>
+							<th>Resposta</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Nome: </td>
+							<td><input type="text" class="form-control" placeholder="Nome"/></td>
+						</tr>
+						<tr>
+							<td>Idade: </td>
+							<td><input type="text" class="form-control" placeholder="Idade"/></td>
+						</tr>
+						<tr>
+							<td>Genero: </td>
+							<td><input type="text" class="form-control" placeholder="Genero"/></td>
+						</tr>
+						<tr>
+							<td>Localizacao (latitude galatica): </td>
+							<td><input type="text" class="form-control" placeholder="Localizacao (latitude galatica):"/></td>
+						</tr>
+						<tr>
+							<td>Localizacao (longitude galatica): </td>
+							<td><input type="text" class="form-control" placeholder="Localizacao (longitude galatica):"/></td>
+						</tr>
+						<tr>
+							<td>Localizacao (nome): </td>
+							<td><input type="text" class="form-control" placeholder="Localizacao (nome):"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de armas): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de armas):"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de municoes): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de municoes):"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de comida): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de comida):"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de agua): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de agua):"/></td>
+						</tr>
+						<tr>
+							<button type="submit" class="btn btn-primary">Adicionar</button>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</body>
+</html>
