@@ -1,4 +1,4 @@
-package com.itsedeug.swr;
+package com.itsedeug.swr.testesdeunidade;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SwrSocialNetworkApplicationTests {
+public class TesteDeInicializacaoAplicacaoSwrSocialNetwork {
 
 	@Test
-	public void contextLoads() {
+	public void carregarContextoDaAplicacao() {
 	}
 
 }
