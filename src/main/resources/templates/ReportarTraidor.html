@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width" />
+		<title>Reportar Traidor</title>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>Reportar traidor</h1>
+		<form class="form-inline" method="POST" style="margin: 20px 0">
+			<div class="form-group">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Informacao</th>
+							<th>Resposta</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Informe seu nome: </td>
+							<td><input type="text" class="form-control" placeholder="nome"/></td>
+						</tr>
+						<tr>
+							<td>Nome do traidor: </td>
+							<td><input type="text" class="form-control" placeholder="nomedotraidor"/></td>
+						</tr>
+						<tr>
+							<button type="submit" class="btn btn-primary">Adicionar</button>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</body>
+</html>

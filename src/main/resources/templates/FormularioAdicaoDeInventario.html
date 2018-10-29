@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width" />
+		<title>Registro de inventario</title>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+			rel="stylesheet"/>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+			rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>Inventario</h1>
+		<form class="form-inline" method="POST" style="margin: 20px 0" th:object="${inventario}" th:action="@{/adicionarInventario}">
+			<div class="form-group">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Informacao</th>
+							<th>Resposta</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Inventario (quantidade de armas): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de armas):" th:field="*{qtdArmas}"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de municoes): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de municoes):" th:field="*{qtdMunicoes}"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de comida): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de comida):" th:field="*{qtdComida}"/></td>
+						</tr>
+						<tr>
+							<td>Inventario (quantidade de agua): </td>
+							<td><input type="text" class="form-control" placeholder="Inventario (quantidade de agua):" th:field="*{qtdAgua}"/></td>
+						</tr>
+						<tr>
+							<button type="submit" class="btn btn-primary">Adicionar</button>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</body>
+</html>

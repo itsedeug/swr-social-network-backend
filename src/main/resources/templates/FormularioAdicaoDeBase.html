@@ -4,15 +4,15 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width" />
-		<title>Registro de novo rebelde</title>
+		<title>Registro da localizacao do novo rebelde</title>
 		<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
 			rel="stylesheet"/>
 		<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
 			rel="stylesheet"/>
 	</head>
 	<body>
-		<h1>Adicionar novo rebelde</h1>
-		<form class="form-inline" method="POST" style="margin: 20px 0" th:object="${rebelde}" th:action="@{/adicionarRebelde}">
+		<h1>Adicionar local</h1>
+		<form class="form-inline" method="POST" style="margin: 20px 0" th:object="${base}" th:action="@{/adicionarBase}">
 			<div class="form-group">
 				<table class="table">
 					<thead>
@@ -23,16 +23,16 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>Nome: </td>
-							<td><input type="text" class="form-control" placeholder="Nome" th:field="*{nome}"/></td>
+							<td>Localizacao (nome): </td>
+							<td><input type="text" class="form-control" placeholder="Localizacao (nome):" th:field="*{nome}"/></td>
 						</tr>
 						<tr>
-							<td>Idade: </td>
-							<td><input type="text" class="form-control" placeholder="Idade" th:field="*{idade}"/></td>
+							<td>Localizacao (latitude galatica): </td>
+							<td><input type="text" class="form-control" placeholder="Localizacao (latitude galatica):" th:field="*{latitude}"/></td>
 						</tr>
 						<tr>
-							<td>Genero: </td>
-							<td><input type="text" class="form-control" placeholder="Genero" th:field="*{genero}"/></td>
+							<td>Localizacao (longitude galatica): </td>
+							<td><input type="text" class="form-control" placeholder="Localizacao (longitude galatica):" th:field="*{longitude}"/></td>
 						</tr>
 						<tr>
 							<button type="submit" class="btn btn-primary">Adicionar</button>

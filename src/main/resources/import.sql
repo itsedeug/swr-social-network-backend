@@ -1,0 +1,2 @@
+insert into Rebelde (id, nome, idade, genero, localizacaoNome, localizacaoLatitude, localizacaoLongitude, qtdArmas, qtdMunicao, qtdComida, qtdAgua) values (1, 'Luke', '24', 'M', 'planetaX', 'latitudeX', 'longitudeX', 1, 0, 0, 1);
+insert into Rebelde (id, nome, idade, genero, localizacaoNome, localizacaoLatitude, localizacaoLongitude, qtdArmas, qtdMunicao, qtdComida, qtdAgua) values (2, 'Leia', '22', 'F', 'planetaY', 'latitudeY', 'longitudeY', 1, 3, 2, 1);
