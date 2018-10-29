@@ -1,4 +1,4 @@
-package com.itsedeug.swr.model;
+package com.itsedeug.swr.controller;
 
 import java.util.List;
 
@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.itsedeug.swr.model.Rebelde;
+import com.itsedeug.swr.model.RepositorioRebeldes;
+
 @RestController
 @RequestMapping("/rebeldes")
-public class RebeldesResource {
-	   
+public class RebeldesController {
+	
 	  @Autowired
 	  private RepositorioRebeldes rebeldes;// <<< Repositório de rebeldes.
 	 
